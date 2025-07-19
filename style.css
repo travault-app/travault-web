@@ -1,0 +1,127 @@
+/* Custom styles for gradients and subtle effects */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1A202C;
+}
+
+.hero-gradient {
+    background: linear-gradient(145deg, #4A00E0, #8E2DE2);
+}
+
+.cta-gradient {
+    background: linear-gradient(145deg, #553c9a, #805AD5);
+}
+
+.btn-primary {
+    background-color: #6B46C1;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #553c9a;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #4A2F8C;
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #f0e6ff;
+    transform: translateY(-2px);
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #E2E8F0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+    background-color: #6B46C1;
+    border: 2px solid white;
+}
+
+/* === CORRECTED ANIMATED TITLE STYLES === */
+.animated-text-container {
+    display: inline-block;
+    overflow: hidden;
+    /* Match the container height to the h1's line-height (leading-tight = 1.25) */
+    height: 1.25em;
+    /* Use a more stable vertical alignment */
+    vertical-align: top;
+    /* Add a small adjustment to perfectly align with text */
+    position: relative;
+    top: 0.1em;
+}
+
+.animated-text-words {
+    display: inline-block;
+    /* Ensure the line-height inside the animation matches the container */
+    line-height: 1.25em;
+    animation: rotateWords 10s infinite ease-in-out;
+    color: #f0e6ff;
+}
+
+@keyframes rotateWords {
+
+    0%,
+    20% {
+        transform: translateY(0);
+    }
+
+    25%,
+    45% {
+        /* Use values that are multiples of the line-height */
+        transform: translateY(-1.25em);
+    }
+
+    50%,
+    70% {
+        transform: translateY(-2.5em);
+    }
+
+    75%,
+    95% {
+        transform: translateY(-3.75em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
