@@ -1,5 +1,4 @@
 # Travault Website
-
 Marketing website for **Travault** — a travel app that helps you discover places, save travel spots, and plan trips in one place.
 
 ## Description
